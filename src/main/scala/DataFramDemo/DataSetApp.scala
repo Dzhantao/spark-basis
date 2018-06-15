@@ -14,9 +14,7 @@ object DataSetApp {
           * option("inferSchema","true") 设置是否具有自动推导Schema类型的功能
           * */
 
-        val path = "file:///D:\\常用\\大数据课程\\大数据(1)\\" +
-                    "34 以慕课网日志分析为例 进入大数据 Spark SQL 的世界\\" +
-                    "p1867y\\ImoocSparkSQLProject\\src\\main\\resources/ipDatabase2.csv"
+        val path = "file:///D:\\常用\\ipDatabase2.csv"
         val ipData = sess.read.option("header","true").option("inferSchema","true").csv(path)
 
         ipData.show()
